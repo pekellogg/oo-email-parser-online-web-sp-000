@@ -11,9 +11,13 @@ class EmailAddressParser
     end
 
     def parse
-        split_emails_arr = @emails_str.split(/[, ]/)
+        split_emails_arr = @emails_str.split(", ") #(/[, ]/) 
         remove_empty_strs = split_emails_arr.delete_if { |i| i == "" }
         unique_emails_arr = remove_empty_strs.uniq
     end
+
+    # def parse
+    #     emails.split(/, | /).uniq
+    # end
 
 end
